@@ -20,14 +20,14 @@ void DrawCircle(SDL_Renderer* renderer, int32_t centreX, int32_t centreY, int32_
 int main(int argc, char* argv[])
 {
 	// Ground size and pos
-	float ground_x_size = 20.0f, ground_y_size = 0.2f;
-	float ground_x = 0.0f, ground_y = -10.0f;
-	float ground_angle = -0.01f * b2_pi;
+	float ground_x_size = 100.0f, ground_y_size = 0.2f;
+	float ground_x = 0.0f, ground_y = -25.0f;
+	float ground_angle = -0.05f * b2_pi;
 
 
 	// Box size and pos
 	float box_x_size = 1.0f, box_y_size = 1.0f;
-	float box_x = 0.0f, box_y = 10.0f;
+	float box_x = -50.0f, box_y = 15.0f;
 	float box_angle = 0.0f;
 	
 	// Time step for box2d simulation
@@ -65,8 +65,8 @@ int main(int argc, char* argv[])
 	b2FixtureDef fixtureDef;
 	fixtureDef.shape = &dynamicBox;
 	fixtureDef.density = 1.0f;
-	fixtureDef.friction = 0.0f;
-	fixtureDef.restitution = 0.01f;
+	fixtureDef.friction = 0.7f;
+	fixtureDef.restitution = 0.8f;
 
 	body->CreateFixture(&fixtureDef);
 
